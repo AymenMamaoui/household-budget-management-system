@@ -137,3 +137,23 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Fichiers ignorés pour le projet
+
+# IDEs (IntelliJ et WebStorm)
+**/.idea/
+**/*.iml
+.vscode/
+
+# Backend - Spring Boot / Maven (Cible les fichiers dans /backend)
+backend/HouseHoldMangSyst/target/
+backend/HouseHoldMangSyst/.mvn/
+backend/HouseHoldMangSyst/*.jar
+backend/HouseHoldMangSyst/*.war
+
+# Frontend - Angular (Cible les fichiers dans /frontend)
+frontend/node_modules/
+frontend/.angular/
+frontend/dist/
+frontend/tmp/
+frontend/out-tsc/
