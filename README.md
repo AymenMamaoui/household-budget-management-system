@@ -6,4 +6,4 @@ Le projet **Household Budget Management System** est une application web intelli
 ## Architecture du Système
 L'application repose sur une architecture moderne en micro-services conteneurisés, assurant une séparation nette entre l'interface utilisateur, la logique métier et le moteur d'intelligence artificielle.
 
-![Architecture du Système](./docs/Architecturediagram.png)
+![Architecture du Système](./docs/appdiag.png)
