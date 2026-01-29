@@ -6,37 +6,4 @@ Le projet **Household Budget Management System** est une application web intelli
 ## Architecture du Système
 L'application repose sur une architecture moderne en micro-services conteneurisés, assurant une séparation nette entre l'interface utilisateur, la logique métier et le moteur d'intelligence artificielle.
 
-```mermaid
-graph TD
-    %% Partie Utilisateur
-    User((Utilisateur / Famille)) -->|Interagit| Angular
-
-    subgraph "Frontend (Docker Container)"
-        Angular[Interface Angular + Tailwind]
-        Dash[Dashboard & Chat IA]
-        Angular --> Dash
-    end
-
-    subgraph "Backend (Docker Container)"
-        Spring[Spring Boot App]
-        Security[Spring Security + JWT Filter]
-        Service[Budget & AI Service]
-        
-        Spring --> Security
-        Security --> Service
-    end
-
-    subgraph "Persistance"
-        MySQL[(Base de Données MySQL)]
-    end
-
-    subgraph "Intelligence Artificielle"
-        AgentIA[Agent IA / Prompt Engineering]
-        LLM[API LLM Externe]
-    end
-
-    %% Flux
-    Angular <-->|Requêtes REST + JWT| Spring
-    Service <-->|SQL| MySQL
-    Service <-->|Prompt Data| AgentIA
-    AgentIA <-->|API Request| LLM
+![Architecture du Système](./docs/Architecturediagram.png)
