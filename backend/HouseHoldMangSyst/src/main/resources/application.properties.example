@@ -1,0 +1,18 @@
+
+# Remplacez 'votre_base_de_donnees' par le nom de votre schéma MySQL
+
+spring.datasource.url=jdbc:mysql://localhost:3306/votre_base_de_donnees?createDatabaseIfNotExist=true&serverTimezone=UTC
+spring.datasource.username=votre_nom_utilisateur
+spring.datasource.password=votre_mot_de_passe
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+spring.jpa.database-platform=org.hibernate.dialect.MySQLDialect
+
+application.security.jwt.secret-key=METTEZ_ICI_UNE_CLE_SECRETE_GENEREE_DE_64_CARACTERES
+# Durée de validité : 1 heure (3600000 ms)
+application.security.jwt.expiration=3600000
+
+server.port=8080
