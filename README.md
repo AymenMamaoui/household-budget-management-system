@@ -25,3 +25,13 @@ application.properties.example : Ce fichier est public et sert de guide de confi
 application.properties : Ce fichier reste uniquement en local (non diffusé). Il contient les clés réelles nécessaires au fonctionnement de l'application.
 
 Après avoir cloné le projet, veuillez copier le fichier .example vers un nouveau fichier application.properties et y renseigner vos propres paramètres.
+
+## 🔐 Flux d'Authentification (JWT)
+L'application utilise des JSON Web Tokens (JWT) pour sécuriser les échanges. Voici le processus de communication entre le frontend Angular et l'API Spring Boot :
+
+![Flux d'authentification](./docs/frontback.png)
+
+### Détails techniques :
+- **Interception** : Un intercepteur Angular injecte automatiquement le token dans le header `Authorization` pour chaque requête sortante.
+- **Persistance** : Le token est géré par un service dédié (`Token`) et stocké de manière sécurisée dans le navigateur.
+- **Validation** : Le backend vérifie la signature et l'expiration du token (1 heure) avant de libérer l'accès aux ressources.
